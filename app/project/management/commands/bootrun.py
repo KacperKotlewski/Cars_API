@@ -1,5 +1,4 @@
 from django.core.management import call_command
-from django.core.management.base import BaseCommand
 from django.core.management.commands.runserver import Command as RunserverCommand
 
 
@@ -10,6 +9,5 @@ class Command(RunserverCommand):
         super().add_arguments(parser)
 
     def handle(self, *args, **options):
-        call_command("migrate", interactive=False)
-        call_command("collectstatic", interactive=False)
+        call_command("bootup", interactive=False)
         return super().handle(*args, **options)

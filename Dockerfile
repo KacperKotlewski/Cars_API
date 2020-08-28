@@ -11,10 +11,10 @@ COPY ./requirements.txt /requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN mkdir /app
-RUN chmod 777 /app
 WORKDIR /app
 COPY ./app /app
 COPY ./.env /app
+RUN python manage.py bootup
 
 #creating non root user for security reasons
 RUN adduser -q --disabled-password user
