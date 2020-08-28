@@ -12,24 +12,9 @@ This project is a REST API made as a task from Netguru
   - [Used technologies](#used-technologies)
 
 
-
-
-
-
-
-
-
-
 ## Requirements
 - [Docker](https://docs.docker.com/v17.12/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
-
-
-
-
-
-
-
 
 
 ## Setup
@@ -38,7 +23,7 @@ Firstly you need to have [required programs](#requirements)
 2. Enter inside project directory on your machine
 3. Create **.env** file based on **.env-example** [click here to read more](#env-configuration)
 4. `docker-compose build`
-5. Now yo can **[run](#run-project)** or **[test](#test-rest-api)** project
+5. Now you can **[run](#run-project)** or **[test](#test-rest-api)** project
 
 
 ### .env configuration
@@ -79,13 +64,6 @@ If command above doesn't work use this command:
 
 [Back to setup](#setup)\
 [Back to overview](#overview)
-
-
-
-
-
-
-
 
 
 ## Used technologies
