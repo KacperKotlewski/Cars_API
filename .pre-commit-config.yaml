@@ -5,8 +5,13 @@ repos:
     - id: check-yaml
     - id: end-of-file-fixer
     - id: trailing-whitespace
-    - id: flake8
-      args: ['--ignore=E501,E203,W503,E303']
+    - id: check-docstring-first
+    - id: check-merge-conflict
+    - id: check-yaml
+    - id: debug-statements
+    - id: check-added-large-files
+    - id: check-byte-order-marker
+    - id: requirements-txt-fixer
 
 -   repo: https://github.com/psf/black
     rev: 19.3b0
