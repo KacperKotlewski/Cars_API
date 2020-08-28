@@ -36,9 +36,10 @@ statics_urlpatterns = [
 
 urlpatterns = (
     [
-        path("admin/", admin.site.urls),
-        re_path(r"^api-auth/", include("rest_framework.urls")),
         path("", project_overview),
+        path("admin/", admin.site.urls),
+        path("api/", include("api.urls")),
+        re_path(r"^api-auth/", include("rest_framework.urls")),
     ]
     + docs_urlpatterns
     + statics_urlpatterns
