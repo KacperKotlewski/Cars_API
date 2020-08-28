@@ -1,0 +1,12 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+build:
+  docker:
+    web: ./Dockerfile
+release:
+  image: web
+  command:
+    - python manage.py flush_db
+run:
+  web: uwsgi --http 0:$PORT --wsgi-file ./project/wsgi.py --master --processes 4 --threads 2
