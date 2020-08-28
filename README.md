@@ -32,9 +32,9 @@ To create .env file follow these steps:
 2. Edit .env file                     <br /> - Linux(Debian) terminal example: **`nano .env`**
 3. Set boolean *DJANGO_DEBUG* (*TRUE* or *FALSE*)
 4. Set *ALLOWED_HOSTS* with your IP's or/and sides (if you want to add **more than one** use *[comma symbol](https://en.wikipedia.org/wiki/Comma)* if you want to **allow all** use *[asterisk symbol](https://en.wikipedia.org/wiki/Asterisk)*)
-5. Additional, nonrequired in final .env file:
-   1. Add *DATABASE_URL* as URL to your DB (by default Django will create SQLite DB file after run app)
-   2. Add *DJANGO_SECRET_KEY* (by default Django will generate random key each time you run the app)
+5. Additional, non-required in final .env file:
+   - Add *DATABASE_URL* as URL to your DB (by default Django will create SQLite DB file after run app)
+   - Add *DJANGO_SECRET_KEY* (by default Django will generate random key each time you run the app)
 
 .env file should look like this:
 ```
