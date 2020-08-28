@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
 DATABASES = {
     "default": config(
-        "DATABASE_URLs", default="sqlite:///" + (root)("db.sqlite3"), cast=db_url
+        "DATABASE_URL", default="sqlite:///" + (root)("db.sqlite3"), cast=db_url
     )
 }
 
