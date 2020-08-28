@@ -8,6 +8,7 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 
 from .settings import MEDIA_ROOT, STATIC_ROOT
+from .views import project_overview
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -37,6 +38,7 @@ urlpatterns = (
     [
         path("admin/", admin.site.urls),
         re_path(r"^api-auth/", include("rest_framework.urls")),
+        path("", project_overview),
     ]
     + docs_urlpatterns
     + statics_urlpatterns
