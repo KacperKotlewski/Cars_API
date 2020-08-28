@@ -31,10 +31,10 @@ To create .env file follow these steps:
 1. Copy *.env-examle* as **.env**     <br /> - Linux(Debian) terminal example: **`cp .env-example .env`**
 2. Edit .env file                     <br /> - Linux(Debian) terminal example: **`nano .env`**
 3. Set boolean *DJANGO_DEBUG* (*TRUE* or *FALSE*)
-4. Set *ALLOWED_HOSTS* with your IP's or/and sides (if you want to add **more then one** use *[comma symbol](https://en.wikipedia.org/wiki/Comma)*, if you want to **allow all** use *[asterisk symbol](https://en.wikipedia.org/wiki/Asterisk)*)
-5. Additional, non required:
-   1. Add *DATABASE_URL* as URL to your DB, but if you don't set this variable Django will create SQLite DB file after run app using docker
-   2. Set your *DJANGO_SECRET_KEY*, but if you don't set up this variable Django will generate random key each time you run the app using docker
+4. Set *ALLOWED_HOSTS* with your IP's or/and sides (if you want to add **more then one** use *[comma symbol](https://en.wikipedia.org/wiki/Comma)* if you want to **allow all** use *[asterisk symbol](https://en.wikipedia.org/wiki/Asterisk)*)
+5. Additional, nonrequired in final .env file:
+   1. Add *DATABASE_URL* as URL to your DB (by default Django will create SQLite DB file after run app)
+   2. Add *DJANGO_SECRET_KEY* (by default Django will generate random key each time you run the app)
 
 .env file should look like this:
 ```
@@ -59,7 +59,7 @@ To run the project using this command:
 >Firstly [setup project](#setup)\
 To run tests use this command:
 `docker-compose run app bash -c "python manage.py test"`\
-If command above doesn't work use this command:
+If the command above doesn't work use this instead:
 `docker-compose run app bash -c "python manage.py test api"`
 
 [Back to setup](#setup)\
@@ -78,7 +78,7 @@ python frameworks & libraries:
   - **[django](https://www.djangoproject.com/)** - the framework for web apps (I did not learn other web apps frameworks for python like Flask because I think Django is the most community-supported and brilliant for big project usage)
   - **[django rest framework](https://www.django-rest-framework.org/)** - the framework for REST API's compatible with Django, is must-have for REST API projects because of features that are provided for the developer's usage
   - **[drf-yasg](https://drf-yasg.readthedocs.io/en/stable/)** - easy to use docs generator for Django rest framework, also must have for REST API project in my opinion, because that provides us easy to read and use for humans docs like swagger or redoc
-  - **requests** - used for validate data by requesting cars from used [vehicle API](https://vpic.nhtsa.dot.gov/api/)
+  - **requests** - used to validate data by requesting cars from used [vehicle API](https://vpic.nhtsa.dot.gov/api/)
   - django-environ, python-decouple, dj_database_url - for statics files and reading .env file values
   - psycopg2 - required PostgreSQL library
 
