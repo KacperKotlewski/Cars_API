@@ -22,13 +22,13 @@ Firstly you need to have [required programs](#requirements)
 1. Clone/download the repository
 2. Enter inside project directory on your machine
 3. Create **.env** file based on **.env-example** [click here to read more](#env-configuration)
-4. `docker-compose build`
+4. Build docker compose, terminal example: `docker-compose build`
 5. Now you can **[run](#run-project)** or **[test](#test-rest-api)** project
 
 
 ### .env configuration
 To create .env file follow these steps:
-1. Copy *.env-examle* as **.env**     <br /> - Linux(Debian) terminal example: **`cp .env-example .env`**
+1. Copy *.env-example* as **.env**     <br /> - Linux(Debian) terminal example: **`cp .env-example .env`**
 2. Edit .env file                     <br /> - Linux(Debian) terminal example: **`nano .env`**
 3. Set boolean *DJANGO_DEBUG* (*TRUE* or *FALSE*)
 4. Set *ALLOWED_HOSTS* with your IP's or/and sides (if you want to add **more then one** use *[comma symbol](https://en.wikipedia.org/wiki/Comma)* if you want to **allow all** use *[asterisk symbol](https://en.wikipedia.org/wiki/Asterisk)*)
