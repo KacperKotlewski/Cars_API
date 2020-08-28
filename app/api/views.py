@@ -3,6 +3,8 @@ from rest_framework.response import Response
 
 from project.utils import Get_Urls
 
+from .viewsets import CarViewSet
+
 
 @api_view(["GET"])
 def api_overview(request):
@@ -20,3 +22,6 @@ def api_overview(request):
         "Popular": "popular/",
     }
     return Response(api_urls)
+
+
+cars = CarViewSet.as_view({"get": "list", "post": "create"})
