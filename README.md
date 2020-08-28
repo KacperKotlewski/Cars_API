@@ -43,12 +43,12 @@ Firstly you need to have [required programs](#requirements)
 
 ### .env configuration
 To create .env file follow these steps:
-1. Linux terminal example:
-   **`cp .env-example .env`**
-2. Set your *DJANGO_SECRET_KEY*, but if you don't set up this variable Django will generate random key each time you run the app using docker
-3. Set boolean *DJANGO_DEBUG* (*TRUE* or *FALSE*, if you don't set this value by default value is **FALSE**)
-4. Set *ALLOWED_HOSTS* with your IP's or/and sides (if you want to add **more then one** use *[comma symbol](https://en.wikipedia.org/wiki/Comma)*, if you want to **allow all** use *[asterisk symbol](https://en.wikipedia.org/wiki/Asterisk)*, if you don't set this value by default value is **localhost** only)
-5. Additional you can add *DATABASE_URL* as URL to your DB, but if you don't set this variable Django will create SQLite DB file after run app using docker
+1. Copy *.env-examle* as **.env**     <br /> - Linux(Debian) terminal example: **`cp .env-example .env`**
+2. Edit .env file                     <br /> - Linux(Debian) terminal example: **`nano .env`**
+3. Set your *DJANGO_SECRET_KEY*, but if you don't set up this variable Django will generate random key each time you run the app using docker
+4. Set boolean *DJANGO_DEBUG* (*TRUE* or *FALSE*, if you don't set this value by default value is **FALSE**)
+5. Set *ALLOWED_HOSTS* with your IP's or/and sides (if you want to add **more then one** use *[comma symbol](https://en.wikipedia.org/wiki/Comma)*, if you want to **allow all** use *[asterisk symbol](https://en.wikipedia.org/wiki/Asterisk)*, if you don't set this value by default value is **localhost** only)
+6. Additional you can add *DATABASE_URL* as URL to your DB, but if you don't set this variable Django will create SQLite DB file after run app using docker
 
 .env file should look like this:
 ```

@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
 DATABASES = {
     "default": config(
-        "DATABASE_URLs", default="sqlite:///" + (root - 1)("db.sqlite3"), cast=db_url
+        "DATABASE_URLs", default="sqlite:///" + (root)("db.sqlite3"), cast=db_url
     )
 }
 
@@ -53,9 +53,9 @@ DATABASES = {
 # --------------------------------------------------- Statics
 
 STATIC_URL = env("STATIC_URL", default="/static/")
-STATIC_ROOT = env("STATIC_ROOT", default=(root - 1)("static"))
+STATIC_ROOT = env("STATIC_ROOT", default=(root)("static"))
 MEDIA_URL = env("MEDIA_URL", default="/media/")
-MEDIA_ROOT = env("MEDIA_ROOT", default=(root - 1)("media"))
+MEDIA_ROOT = env("MEDIA_ROOT", default=(root)("media"))
 
 
 # --------------------------------------------------- Rest settings

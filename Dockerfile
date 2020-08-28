@@ -11,6 +11,7 @@ COPY ./requirements.txt /requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN mkdir /app
+RUN chmod 777 /app
 WORKDIR /app
 COPY ./app /app
 COPY ./.env /app
