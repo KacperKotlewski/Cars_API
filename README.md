@@ -68,16 +68,16 @@ If the command above doesn't work use this instead:
 
 ## Used technologies
 
-technologies:
+Technologies:
   - [Docker](https://docs.docker.com/v17.12/install/)
   - [Docker Compose](https://docs.docker.com/compose/install/)
   - [python 3.8.5](https://www.python.org/downloads/release/python-385/)
-  - [PostgreSQL](https://www.postgresql.org/) - I choose those SQL DB because it is more professional than SQLite which I often use in my projects
+  - [PostgreSQL](https://www.postgresql.org/) - I choose this SQL DB because it's more professional than SQLite which I often use in my projects
 
-python frameworks & libraries:
-  - **[django](https://www.djangoproject.com/)** - the framework for web apps (I did not learn other web apps frameworks for python like Flask because I think Django is the most community-supported and brilliant for big project usage)
-  - **[django rest framework](https://www.django-rest-framework.org/)** - the framework for REST API's compatible with Django, is must-have for REST API projects because of features that are provided for the developer's usage
-  - **[drf-yasg](https://drf-yasg.readthedocs.io/en/stable/)** - easy to use docs generator for Django rest framework, also must have for REST API project in my opinion, because that provides us easy to read and use for humans docs like swagger or redoc
+Python frameworks & libraries:
+  - **[django](https://www.djangoproject.com/)** - the framework for web apps (I did not learn other web apps frameworks for python like Flask because I think Django is the most community supported and brilliant for big project usage)
+  - **[django rest framework](https://www.django-rest-framework.org/)** - the framework for REST API's compatible with Django, is must have for REST API projects because of features that are provided for the developer's usage
+  - **[drf-yasg](https://drf-yasg.readthedocs.io/en/stable/)** - easy to use docs generator for Django REST framework, also must have for REST API project in my opinion, because that provides us easy to read and use for humans docs like swagger or redoc
   - **requests** - used to validate data by requesting cars from used [vehicle API](https://vpic.nhtsa.dot.gov/api/)
   - django-environ, python-decouple, dj_database_url - for statics files and reading .env file values
   - psycopg2 - required PostgreSQL library
