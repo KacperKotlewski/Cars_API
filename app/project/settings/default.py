@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
+from django.core.management.utils import get_random_secret_key
+
 import environ
 from decouple import Csv, config
 from dj_database_url import parse as db_url
-
 
 # --------------------------------------------------- Basics
 env = environ.Env()
@@ -10,7 +11,7 @@ root = environ.Path(__file__) - 3
 
 BASE_DIR = root()
 
-SECRET_KEY = config("DJANGO_SECRET_KEY")
+SECRET_KEY = config("DJANGO_SECRET_KEY", default=get_random_secret_key())
 DEBUG = config("DJANGO_DEBUG", cast=bool, default=False)
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv(), default="localhost")
 
